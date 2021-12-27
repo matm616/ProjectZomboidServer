@@ -62,10 +62,11 @@ These values will overwrite existing values in the config on restart
 - **27015** RCON
 - **16261** Game server (udp)
 
+# Notes
 ## Contributions
 - [CM2Walki/steamcmd](https://github.com/CM2Walki/steamcmd): For the base steamcmd image and image configuration
 - [cyrale/project-zomboid](https://github.com/cyrale/project-zomboid): For information on image scripts and configuration
 - [Project Zomboid Dedicated Server Wiki](https://pzwiki.net/wiki/Dedicated_Server): For information on how to set up the game server
 
 ## Final Notes
-Use at own risk, this is the first time I created a docker image and its messy
+Use at own risk, this is the first time I created a docker image and it's messy
