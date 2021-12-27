@@ -25,4 +25,4 @@ then
     sed -ri "s/^RCONPassword=(.*)$/RCONPassword=${RCON_PASSWORD}/" "${server_ini_file}"
 fi
 
-bash "${STEAMAPPDIR}/start-server.sh "${xmsarg}" "${xmxarg}" -adminpassword "${ADMIN_PASSWORD}" -servername "server"
+bash "${STEAMAPPDIR}/start-server.sh "${xmsarg}" "${xmxarg}" -adminpassword "${ADMIN_PASSWORD}" -servername "server""
