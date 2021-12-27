@@ -14,7 +14,7 @@ xmxarg+="${XMX}"
 xmsarg="-Xms"
 xmsarg+="${XMS}"
 
-server_ini_file="/home/steam/Zomboid/Server/server.ini"
+server_ini_file="${HOMEDIR}/Zomboid/Server/server.ini"
 # Change server configuration
 if [ -f $server_ini_file ]
 then
@@ -25,4 +25,4 @@ then
     sed -ri "s/^RCONPassword=(.*)$/RCONPassword=${RCON_PASSWORD}/" "${server_ini_file}"
 fi
 
-bash "${STEAMAPPDIR}/start-server.sh "${xmsarg}" "${xmxarg}" -adminpassword "${ADMIN_PASSWORD}" -servername "server""
+/bin/bash /home/steam/projectzomboid-dedicated/start-server.sh "${xmsarg}" "${xmxarg}" -adminpassword "${ADMIN_PASSWORD}" -servername "server"
