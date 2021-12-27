@@ -32,8 +32,10 @@ RUN set -x \
 	&& rm -rf /var/lib/apt/lists/* 
 	
 # Link server directories
-RUN ln -s /home/steam/Zomboid /server-data \
-    ln -s /home/steam/projectzomboid-dedicated /server-files
+RUN mkdir /server-data \
+	&& ln -s /home/steam/Zomboid /server-data \
+	&& mkdir /server-files \
+	&& ln -s /home/steam/projectzomboid-dedicated /server-files
 
 
 ENV SERVER_PUBLIC_NAME="Project Zomboid Server on Docker" \
@@ -54,8 +56,8 @@ WORKDIR ${HOMEDIR}
 CMD ["bash", "entry.sh"]
 
 # Expose ports
-EXPOSE 8766 /udp \
-	8767 /udp \
-	16261 /udp
+EXPOSE 8766/udp \
+	8767/udp \
+	16261/udp
 	
 VOLUME ["/server-data", "/server-files"]
